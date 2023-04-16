@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+     font-family: 'Poppins', sans-serif;
+     color: var(--text-color);
+ }
+
+ :root {
+     --blue: #1d9bf0;
+     --black:#000;
+     --text-color:#e7e9ea;
+     --second-title: rgb(113, 118, 123);
+ }
+ *::-webkit-scrollbar {
+    width: 1px;
+}
+
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue); 
+}
+.d-none{
+    display: none
+}
+.d-block{
+    display: block;
+}
+ .bg-blue {
+     background-color: var(--blue) !important;
+ }
+ .text-blue {
+     color: var(--blue) !important;
+ }
+.bg-gray{
+    background-color: #202327; 
+}
+ #root{
+    height: 100%;
+ }
+ a{
+    color: inherit;
+    text-decoration: none;
+ }
+ body{
+    background-color: var(--black);
+   max-height:  100vh;
+   height: 100vh;
+ }
+ html {
+     line-height: 1.15;
+     /* 1 */
+     -webkit-text-size-adjust: 100%;
+     /* 2 */
+ }
+
+
+ h1 {
+     font-size: 2em;
+     margin: 0.67em 0;
+ }
+
+ b,
+ strong {
+     font-weight: bolder;
+ }
+
+ small {
+     font-size: 80%;
+ }
+
+ img {
+     border-style: none;
+ }
+
+
+ button,
+ input,
+ optgroup,
+ select,
+ textarea {
+     font-family: inherit;
+     /* 1 */
+     font-size: 100%;
+     /* 1 */
+     line-height: 1.15;
+     /* 1 */
+     margin: 0;
+     /* 2 */
+ }
+
+ button::-moz-focus-inner,
+ [type="button"]::-moz-focus-inner,
+ [type="reset"]::-moz-focus-inner,
+ [type="submit"]::-moz-focus-inner {
+     border-style: none;
+     padding: 0;
+ }
+
+
+
+ [type="checkbox"],
+ [type="radio"] {
+     box-sizing: border-box;
+     /* 1 */
+     padding: 0;
+     /* 2 */
+ }
+
+
+ [hidden] {
+     display: none;
+ }

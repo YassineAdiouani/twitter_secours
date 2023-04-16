@@ -1,0 +1,40 @@
+.bookmarks__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.bookmarks__title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.bookmarks__username {
+    color: rgb(113, 118, 123);
+    font-size: 13px;
+}
+
+.bookmarks__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.bookmarks__empty__title {
+    font-size: 31px;
+    font-weight: 700;
+}
+
+.bookmarks__blabla {
+    color: rgb(113, 118, 123);
+    font-size: 15px;
+    margin-top: 10px;
+}

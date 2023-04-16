@@ -1,0 +1,13 @@
+.countainer{
+    max-width: 1300px;
+    width: fit-content;
+    display: flex;  
+    margin-inline: auto;
+    height: 100%;
+    padding-inline: 10px;
+}
+@media (max-width: 730px) {
+    .countainer{
+        width: 100%;
+    }
+}

@@ -1,0 +1,42 @@
+.whotofollow{
+    height: fit-content;
+    margin-top: 20px;
+    max-width: 380px;
+    overflow: hidden;
+    width: 380px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.suggestion__user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.suggestion__user .avatar{
+    width: 50px;
+    height: 50px;
+}
+.suggestion__content{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.suggestion__info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.button__follow{
+    all: unset;
+    color: rgb(15, 20, 25);
+    background-color: white;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 9px 18px;
+    cursor: pointer;
+    border-radius: 17px;
+}
