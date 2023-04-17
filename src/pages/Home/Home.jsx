@@ -1,22 +1,35 @@
-import AsideTrends from '../../components/Trends/AsideTrends' 
-import Sidebar from '../../components/sidebar/Sidebar'
+import React from 'react'
 import Countainer from '../../layouts/Countainer'
+import Sidebar from '../../components/sidebar/Sidebar'
 import Main from '../../layouts/Main'
-import './home.css'
- 
-function Home() {  
-  return (
-    <Countainer>
-      <Sidebar/>
-        <Main> 
-          <div>
-            {/* Ur Code here  */}
-            <h1 className='text-blue'>Home</h1>
-          </div>
-        </Main>
-      <AsideTrends/>
-    </Countainer>
-  )
-}
+import WhoToFollow from '../../components/WhoToFollow/WhoToFollow'
+import HeadTweet from "./HeadTweet";
+import Post from '../../components/posts/Post'
 
-export default Home
+export default function Home() {
+    return (
+        <Countainer>
+            <Sidebar />
+            <Main>
+                <HeadTweet />
+                {/* ============= POST ============= */}
+                <Post
+                    usename={"ossama banzima"}
+                    tagname={"@ossamabanzima"}
+                    verify={true}
+                    title={"only boys can bet me in my terrantory"}
+                    tweet={
+                    "https://i.pinimg.com/564x/fb/a3/47/fba34776c01f241f3481d392fd296aaf.jpg"
+                    }
+                />
+                <Post
+                    usename={"ossama banzima"}
+                    tagname={"@ossamabanzima"}
+                    verify={true}
+                    title={"only boys can bet me in my terrantory"}
+                />
+            </Main>
+            <WhoToFollow />
+        </Countainer>
+    );
+}

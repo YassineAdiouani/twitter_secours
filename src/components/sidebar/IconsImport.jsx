@@ -10,5 +10,5 @@ import ExploreIcon from '../icons/ExploreIcon'
 import MoreIcon from '../icons/MoreIcon'
 export {
     ThreePoints, Save, NewTweetIcon, TwitterIcon, HomeIcon, NotificationIcon, MessageIcon,
-    UserIcon, ExploreIcon, MoreIcon
+    UserIcon, ExploreIcon, MoreIcon,
 }
