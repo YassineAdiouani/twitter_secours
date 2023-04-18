@@ -1,10 +1,10 @@
 import React from 'react'
 import './Post.css';
-import { VerifyIcon } from '../Icons/PostIcons';
+import { VerifyIcon, CommentIcon, RetweetIcon, LikeIcon, ShareIcon } from '../Icons/PostIcons';
 import ThreePoints from '../Icons/ThreePoints';
 
 export default function Post({
-    profile_avatar,usename,tagname,verify,title,tweet
+    profile_avatar, usename, tagname, verify, title, tweet,retweeted,liked
 }) {
     return (
         <section className="post__section">
@@ -13,9 +13,9 @@ export default function Post({
             </div>
             <div className="post__body">
                 <div className="post__headerText">
-                    <h3> <a href="#"> {usename} </a> {' '} 
-                        <small> 
-                            {verify && <span className="valid"><VerifyIcon /></span> }{' '}
+                    <h3> <a href="#"> {usename} </a> {' '}
+                        <small>
+                            {verify && <span className="valid"><VerifyIcon /></span>}{' '}
                             {tagname}
                         </small>
                     </h3>
@@ -26,13 +26,29 @@ export default function Post({
                 <div className="post__description">
                     {title && <p> {title} </p>}
                 </div>
-                { tweet && <img src={tweet} alt="tweet__post" /> }
-                <div className="post__footer">
-                    <span>A</span>
-                    <span>B</span>
-                    <span>C</span>
-                    <span>D</span>
-                </div>
+                {tweet && <img className='tweet__post' src={tweet} alt="tweet__post" />}
+                <ul className="post__footer">
+                    <li>
+                        <span>
+                            <CommentIcon />
+                        </span> {'  '} 155
+                    </li>
+                    <li className='Reweet__icon retweet'>
+                        <span>
+                            <RetweetIcon />
+                        </span> {'  '} 15
+                    </li>
+                    <li className='Like__icon liked'>
+                        <span>
+                            <LikeIcon />
+                        </span> {'  '} 15
+                    </li>
+                    <li>
+                        <span>
+                            <ShareIcon />
+                        </span>
+                    </li>
+                </ul>
             </div>
         </section>
     )

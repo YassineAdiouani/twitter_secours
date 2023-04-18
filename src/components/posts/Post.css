@@ -4,6 +4,7 @@
     border-bottom: 1px solid rgba(128, 128, 128, 0.436);
     padding-bottom: 15px;
     padding: 10px 10px 0;
+    cursor: pointer;
 }
 
 .post__avatar{
@@ -26,10 +27,11 @@
     width: 100%;
     padding: 0px 10px 10px;
 }
-
-.post__section img {
+.post__section .tweet__post{
+    max-height: 530px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
-    width: 100%;
 }
 
 .post__headerText h3 {
@@ -51,18 +53,76 @@
     margin-bottom: 12px;
 }
 
-.post__footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
 .valid svg,
+.post__footer svg,
 .post__option svg{
     padding-top: 5px;
     height: 1.3rem !important;
     fill: var(--blue);
 }
+
+.post__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+.post__footer li{
+    max-width: 80px;
+    font-size: 13px;
+    color: #71767B;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.post__footer li span{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .3s ease;
+    margin-right: 2px;
+}
+.post__footer li:hover svg{
+    fill: #1d9bf0;  
+}
+.post__footer li:hover span{
+    background-color: #1d9cf02f;  
+}
+.post__footer li:hover{
+    color: #1d9bf0;  
+    transition: all .3s ease;
+}
+.post__footer li.Like__icon:hover svg{
+    fill: #F91880;  
+}
+.post__footer li.Like__icon:hover span{
+    background-color: #f9188131;  
+}
+.post__footer li.Like__icon:hover{
+    color: #F91880;  
+    transition: all .3s ease;
+}
+.post__footer li.Reweet__icon:is(:hover,.retweet) svg{
+    fill: #00B075;  
+}
+.post__footer li.Reweet__icon:hover span{
+    background-color: #00b0754c;  
+}
+.post__footer li.Reweet__icon:is(:hover,.retweet){
+    color: #00B075;  
+    transition: all .3s ease;
+}
+.post__footer svg{
+    height: 1.4rem !important;
+    fill: #71767B;
+    padding: 1px;
+    cursor: pointer;
+}
+
 .post__option svg {
     fill: #71767B;
 }

@@ -1,9 +1,11 @@
 import './sidebar.css'
 import SidebarItem from './SidebarItem'
 import * as icons from './IconsImport'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Sidebar() {
+  const location = useLocation()
+  const login = location.pathname != '/login';
   return (
     <>
       <div className="sidebar">
@@ -13,28 +15,37 @@ export default function Sidebar() {
               <icons.TwitterIcon fill="#e7e9ea" />
             </Link>
             <ul className="sidebar__items">
-              <SidebarItem notf={true} to="/" text="Home">
-                <icons.HomeIcon fill="#e7e9ea" />
-              </SidebarItem>
+              {login && <SidebarItem notf={true} to="/" text="Home">
+                      <icons.HomeIcon fill="#e7e9ea" />
+                    </SidebarItem>
+              }
               <SidebarItem notf={false} to="/explore" text="Explore">
                 <icons.ExploreIcon fill="#e7e9ea" />
               </SidebarItem>
-              <SidebarItem notf={true} to="/notifications" text="Notifications">
-                <icons.NotificationIcon fill="#e7e9ea" />
-              </SidebarItem>
-              <SidebarItem notf={false} to="/messages" text="Messages">
-                <icons.MessageIcon fill="#e7e9ea" />
-              </SidebarItem>
-              <SidebarItem notf={false} to="/bookmarks" text="Bookmarks">
-                <icons.Save fill="#e7e9ea" />
-              </SidebarItem>
-              <SidebarItem notf={false} to="/profile" text="Profile">
-                <icons.UserIcon fill="#e7e9ea" />
-              </SidebarItem>
+              {
+                login && (<>
+                    <SidebarItem notf={true} to="/notifications" text="Notifications">
+                      <icons.NotificationIcon fill="#e7e9ea" />
+                    </SidebarItem>
+                    <SidebarItem notf={false} to="/messages" text="Messages">
+                      <icons.MessageIcon fill="#e7e9ea" />
+                    </SidebarItem>
+                    <SidebarItem notf={false} to="/bookmarks" text="Bookmarks">
+                      <icons.Save fill="#e7e9ea" />
+                    </SidebarItem>
+                    <SidebarItem notf={false} to="/profile" text="Profile">
+                      <icons.UserIcon fill="#e7e9ea" />
+                    </SidebarItem>
+                  </>
+                )
+              }
+
               <SidebarItem notf={false} to="/more" text="More">
                 <icons.MoreIcon fill="#e7e9ea" />
               </SidebarItem>
-              <button className='tweet__bottom bg-blue' > <p className='text'>Tweet</p> <icons.NewTweetIcon className="d-none icon" fill="#e7e9ea" /></button>
+              {
+                login && <button className='tweet__bottom bg-blue' > <p className='text'>Tweet</p> <icons.NewTweetIcon className="d-none icon" fill="#e7e9ea" /></button>
+              }
             </ul>
           </nav>
           <div className="sidebar__user hover">

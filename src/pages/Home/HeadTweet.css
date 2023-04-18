@@ -3,7 +3,7 @@
 }
 .head_name_page {
     backdrop-filter: blur(20px);
-    backdrop-filter: brightness(12%);
+    backdrop-filter: brightness(14%);
     z-index: 10;
     max-width: 610px;
     width: 100%;

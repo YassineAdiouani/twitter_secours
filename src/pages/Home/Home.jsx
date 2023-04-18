@@ -28,6 +28,13 @@ export default function Home() {
                     verify={true}
                     title={"only boys can bet me in my terrantory"}
                 />
+                <Post
+                    usename={"ossama banzima"}
+                    tagname={"@ossamabanzima"}
+                    verify={true}
+                    title={"only boys can bet me in my terrantory"}
+                    tweet={'https://i.pinimg.com/564x/fc/40/df/fc40dfa22da42e25ce506281c4381a39.jpg'}
+                />
             </Main>
             <WhoToFollow />
         </Countainer>
