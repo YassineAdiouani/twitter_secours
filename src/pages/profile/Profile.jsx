@@ -1,20 +1,24 @@
 import './profile.css'
-import AsideTrends from '../../components/Trends/AsideTrends' 
+import AsideTrends from '../../components/Trends/AsideTrends'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Countainer from '../../layouts/Countainer'
 import Main from '../../layouts/Main'
- 
-function Profile() {  
+import ProfileHeader from '../../components/profile/ProfileHeader'
+import ProfileTweet from '../../components/profile/ProfileTweet'
+// import ProfileTweetsReply from '../../components/profile/ProfileTweetsReply'
+
+function Profile() {
   return (
     <Countainer>
-      <Sidebar/>
-        <Main> 
-          <div>
-            <h1 className='text-blue'>Profile</h1>
-            {/* Ur Code here  */}
-          </div>
-        </Main>
-      <AsideTrends/>
+      <Sidebar />
+      <Main>
+      <div>
+        <ProfileHeader />
+        <ProfileTweet />
+        {/* <ProfileTweetsReply/> */}
+      </div>
+      </Main>
+      <AsideTrends />
     </Countainer>
   )
 }
