@@ -5,7 +5,7 @@ const StateContext = createContext()
 
 export const ContextProvider = ({ children }) => {
     const Auth = false;
-    const [AuthModal, setAuthModal] = useState(true)
+    const [AuthModal, setAuthModal] = useState(false)
     return (
         <StateContext.Provider value={{ Auth, AuthModal, setAuthModal }}>
             {
