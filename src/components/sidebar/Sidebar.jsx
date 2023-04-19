@@ -1,11 +1,11 @@
 import './sidebar.css'
 import SidebarItem from './SidebarItem'
 import * as icons from './IconsImport'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useStateContext } from '../../contexts/ContextProvider'
 
 export default function Sidebar() {
-  const location = useLocation()
-  const login = location.pathname != '/login';
+  const { Auth } = useStateContext()
   return (
     <>
       <div className="sidebar">
@@ -15,15 +15,14 @@ export default function Sidebar() {
               <icons.TwitterIcon fill="#e7e9ea" />
             </Link>
             <ul className="sidebar__items">
-              {login && <SidebarItem notf={true} to="/" text="Home">
-                      <icons.HomeIcon fill="#e7e9ea" />
-                    </SidebarItem>
-              }
-              <SidebarItem notf={false} to="/explore" text="Explore">
-                <icons.ExploreIcon fill="#e7e9ea" />
+              <SidebarItem notf={true} to="/" text={Auth ? "Home" : "explore"}>
+                {Auth ? <icons.HomeIcon fill="#e7e9ea" /> : <icons.ExploreIcon fill="#e7e9ea" />}
               </SidebarItem>
               {
-                login && (<>
+                Auth && (<>
+                    <SidebarItem notf={false} to="/explore" text="Explore">
+                      <icons.ExploreIcon fill="#e7e9ea" />
+                    </SidebarItem>
                     <SidebarItem notf={true} to="/notifications" text="Notifications">
                       <icons.NotificationIcon fill="#e7e9ea" />
                     </SidebarItem>
@@ -44,11 +43,13 @@ export default function Sidebar() {
                 <icons.MoreIcon fill="#e7e9ea" />
               </SidebarItem>
               {
-                login && <button className='tweet__bottom bg-blue' > <p className='text'>Tweet</p> <icons.NewTweetIcon className="d-none icon" fill="#e7e9ea" /></button>
+                Auth && <button className='tweet__bottom bg-blue' > <p className='text'>Tweet</p> <icons.NewTweetIcon className="d-none icon" fill="#e7e9ea" /></button>
               }
             </ul>
           </nav>
-          <div className="sidebar__user hover">
+          {
+            Auth && (
+              <div className="sidebar__user hover">
             <div className="user__info">
               <div className="avatar">
                 <img src="https://pbs.twimg.com/profile_images/1613293977985318932/uR3GlJQf_normal.jpg" alt="" />
@@ -62,6 +63,8 @@ export default function Sidebar() {
               <icons.ThreePoints  />
             </div>
           </div>
+            )
+          }
         </div >
       </div >
     </>

@@ -1,15 +1,11 @@
 import React from 'react'
-import Countainer from '../../layouts/Countainer'
-import Sidebar from '../../components/sidebar/Sidebar'
 import Main from '../../layouts/Main'
-import WhoToFollow from '../../components/WhoToFollow/WhoToFollow'
 import HeadTweet from "./HeadTweet";
 import Post from '../../components/posts/Post'
 
 export default function Home() {
     return (
-        <Countainer>
-            <Sidebar />
+        <>
             <Main>
                 <HeadTweet />
                 {/* ============= POST ============= */}
@@ -36,7 +32,6 @@ export default function Home() {
                     tweet={'https://i.pinimg.com/564x/fc/40/df/fc40dfa22da42e25ce506281c4381a39.jpg'}
                 />
             </Main>
-            <WhoToFollow />
-        </Countainer>
+        </>
     );
 }

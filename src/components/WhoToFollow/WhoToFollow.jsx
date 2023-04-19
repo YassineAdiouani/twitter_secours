@@ -1,6 +1,7 @@
 import React from 'react'
 import './WhoToFollow.css'
 import SuggestionUser from './SuggestionUser'
+
 export default function Suggestions() {
   return (
     <div className="whotofollow bg-gray">

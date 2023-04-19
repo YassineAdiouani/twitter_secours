@@ -7,15 +7,11 @@ import AsideTrends from '../../components/Trends/AsideTrends'
 
 export default function Messages() {
   return (
-    <Countainer>
-      <Sidebar/>
         <Main> 
           <div>
             {/* Ur Code here  */}
             <h1 className='text-blue'>Messages</h1>
           </div>
-        </Main>
-      <AsideTrends/>
-    </Countainer>
+        </Main> 
   )
 }

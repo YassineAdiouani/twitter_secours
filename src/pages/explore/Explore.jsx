@@ -8,13 +8,8 @@ import AsideTrends from '../../components/Trends/AsideTrends'
 
 export default function Explore() {
   return (
-    <Countainer>
-      <Sidebar/>
         <Main>
           <Trends FromExplore={true} />
         </Main>
-      <WhoToFollow  />
-    </Countainer>
-    
   )
 }

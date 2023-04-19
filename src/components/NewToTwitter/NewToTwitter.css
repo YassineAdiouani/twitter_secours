@@ -1,0 +1,85 @@
+.NewToTwitter{
+    height: fit-content;
+    margin-top: 20px;
+    max-width: 370px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 7px;
+}
+.newtotwitter__form{
+    padding: 12px;
+    border-radius: 17px;
+    border: 1px solid #ffffff32;
+}
+.new__title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.new__parag{
+    margin: 15px 0;
+    font-size: 13px;
+    color: #747474;
+}
+.new__body {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+}
+.new__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 12px;
+}
+.new__body button{
+    color: rgb(15, 20, 25);
+    border-radius: 33px;
+    outline: none;
+    border: none;
+    height: 38px;
+    width: 97%;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.new__body button:hover {
+    background-color: #dfdfdf;
+}
+.new__footer {
+    margin-top: 14px;
+}
+.new__footer span{
+    font-size: 13.5px;
+    color: #747474;
+}
+.new__footer a{
+    color: #1D9BF0;
+}
+.new__footer a:hover,
+.new_links a:hover{
+    text-decoration: underline;
+}
+.new__title__footer{
+    font-size: 13.5px;
+}
+.new_links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+}
+.new__title__footer .new_links,
+.new__title__footer  p {
+    color: #747474;
+}
+
+@media (max-width: 1100px) {
+    .NewToTwitter {
+        display: none;
+    }
+}
