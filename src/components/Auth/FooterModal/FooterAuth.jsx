@@ -1,7 +1,10 @@
 import React from 'react';
 import './FooterAuth.css';
+import { useStateContext } from '../../../contexts/ContextProvider';
 
 function FooterAuth() {
+    const { setAuthModal } = useStateContext();
+
     return (
         <div className="modal">
             <div className="modal__content">
@@ -16,7 +19,7 @@ function FooterAuth() {
                         </p>
                     </div>
                     <div className="modal__buttons">
-                        <button className='modal__button'>Log in</button>
+                        <button onClick={() => setAuthModal(true)} className='modal__button'>Log in</button>
                         <button>Sign up</button>
                     </div>
                 </div>
