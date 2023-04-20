@@ -108,13 +108,13 @@
     color: #F91880;  
     transition: all .3s ease;
 }
-.post__footer li.Reweet__icon:is(:hover,.retweet) svg{
+.post__footer li.Reweet__icon:is(:hover,.reetweet) svg{
     fill: #00B075;  
 }
 .post__footer li.Reweet__icon:hover span{
     background-color: #00b0754c;  
 }
-.post__footer li.Reweet__icon:is(:hover,.retweet){
+.post__footer li.Reweet__icon:is(:hover,.reetweet){
     color: #00B075;  
     transition: all .3s ease;
 }
