@@ -33,7 +33,7 @@ export default function Post({
                             <CommentIcon />
                         </span> {'  '} 155
                     </li>
-                    <li className='Reweet__icon retweet'>
+                    <li className='Reweet__icon reetweet'>
                         <span>
                             <RetweetIcon />
                         </span> {'  '} 15

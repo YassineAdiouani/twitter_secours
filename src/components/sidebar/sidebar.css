@@ -7,10 +7,10 @@
  
 .sidebar__content{
     height: 100%;
-    width: 258px; 
+    width: 249px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between  ;
+    justify-content: space-between;
     position: fixed;
     border-right: 1px solid rgba(128, 128, 128, 0.436);
     padding-top: 10px;

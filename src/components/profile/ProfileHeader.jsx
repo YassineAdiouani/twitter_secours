@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './ProfileHeader.css'
-// import { BiArrowBack } from "react-icons/bi";
-// import { CgMoreAlt ,CgCalendarDates } from "react-icons/cg";
+import { BiArrowBack } from "react-icons/bi";
+import { CgMoreAlt ,CgCalendarDates } from "react-icons/cg";
 
 const ProfileHeader = () => {
   const [follow, setfollow] = useState(false)
@@ -12,7 +12,7 @@ const ProfileHeader = () => {
     <div>
         <div id="box-top">
           <span id="back-icon-box">
-            {/* <BiArrowBack id="back-icon" /> */}
+            <BiArrowBack id="back-icon" />
           </span>
 
           <div id="box-top-right">
@@ -28,7 +28,7 @@ const ProfileHeader = () => {
 
       <div id="edit-box">
         <span id="more-box">
-          {/* <CgMoreAlt id="more-header"  /> */}
+          <CgMoreAlt id="more-header"  />
         </span>
         <button
           className="Follow"
@@ -49,7 +49,7 @@ const ProfileHeader = () => {
       </div>
       
       <div id="date-box">
-        {/* <CgCalendarDates id="date-icon" /> */}
+        <CgCalendarDates id="date-icon" />
         <p id="date">Joined January 2021</p>
       </div>
 
