@@ -8,7 +8,7 @@ export default function Post({
 }) {
     return (
         <section className="post__section">
-            <div className="post__avatar">
+            <div className="post__avatar avatar">
                 <img src="https://cdn.discordapp.com/avatars/787349101414187059/79e57a3f1d0fa6dbca1607cc95930f34.webp?size=32" alt="profile_avatar" />
             </div>
             <div className="post__body">
@@ -33,14 +33,14 @@ export default function Post({
                             <CommentIcon />
                         </span> {'  '} 155
                     </li>
-                    <li className='Reweet__icon reetweet'>
+                    <li className={`Reweet__icon ${retweeted && 'reetweet'}`}>
                         <span>
                             <RetweetIcon />
                         </span> {'  '} 15
                     </li>
-                    <li className='Like__icon liked'>
+                    <li className={`Like__icon ${liked && 'liked'}`}>
                         <span>
-                            <LikeIcon />
+                            <LikeIcon liked={liked} />
                         </span> {'  '} 15
                     </li>
                     <li>

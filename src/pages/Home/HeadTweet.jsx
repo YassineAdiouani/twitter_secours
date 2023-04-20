@@ -13,17 +13,17 @@ export default function HeadTweet() {
                     <h3>Accueil</h3>
                 </div>
                 <div className="header__links">
-                    <div onClick={handleChange} className={active && "active"}>
+                    <div onClick={handleChange} className={active ? "active" : ''}>
                     <a href="#">Pour vous</a>
                     </div>
-                    <div onClick={handleChange} className={!active && "active"}>
+                    <div onClick={handleChange} className={!active ? "active" : ''}>
                     <a href="#">Abonnements</a>
                     </div>
             </div>
         </div>
         <div className="header__input">
             <div className="header__fields">
-                <div className="header__avatar">
+                <div className="header__avatar avatar">
                     <img
                     src="https://cdn.discordapp.com/avatars/787349101414187059/79e57a3f1d0fa6dbca1607cc95930f34.webp?size=32"
                     alt="profile_avatar"
