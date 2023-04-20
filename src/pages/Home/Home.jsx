@@ -21,7 +21,7 @@ export default function Home() {
                     }
                 />
                 <Post
-                    usename={"ossama banzima"}
+                    usename={"ossamaBonif"}
                     tagname={"@ossamabanzima"}
                     verify={true} 
                     title={"only boys can bet me in my terrantory"}
