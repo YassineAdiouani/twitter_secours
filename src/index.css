@@ -43,7 +43,28 @@
 .bg-gray {
     background-color: #202327;
 }
-
+.text-gray{
+   color:  rgb(113, 118, 123) !important;
+}
+.ellipsis{
+    max-width: 100%; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+}
+.underline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 #root {
     height: 100%;
 }

@@ -7,7 +7,7 @@
  
 .sidebar__content{
     height: 100%;
-    width: 258px; 
+    width: 249px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between  ;
@@ -123,6 +123,7 @@
 }
 .username{
     color: rgb(113, 118, 123);
+    font-size: 15px
 }
 .user__action svg{
     height: 1.25rem !important;
@@ -137,12 +138,7 @@
 .hover:hover{
     background-color: #80808026;
 }
-.ellipsis{
-    max-width: 100%; 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+
 
 @media (max-width: 1280px) {
     .sidebar__text{

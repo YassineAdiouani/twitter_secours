@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Gallery from "./icons/Gallery";
 import "./HeadTweet.css";
-import * as icons from './IconsImport';
+import * as icons from './IconsImport'; 
 
 export default function HeadTweet() {
     const [active, setActive] = useState(true);
-    const handleChange = () => setActive(!active);
+    const handleChange = () => setActive(!active); 
     return (
         <header className="header__section">
             <div className="head_name_page">
@@ -23,7 +23,7 @@ export default function HeadTweet() {
         </div>
         <div className="header__input">
             <div className="header__fields">
-                <div className="header__avatar">
+                <div className="header__avatar avatar">
                     <img
                     src="https://cdn.discordapp.com/avatars/787349101414187059/79e57a3f1d0fa6dbca1607cc95930f34.webp?size=32"
                     alt="profile_avatar"
