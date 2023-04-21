@@ -10,3 +10,13 @@ step 3
 step 4
     start server with command: " npm run dev ".
 
+
+
+
+
+command :  ==> npm i <==
+
+    => npm i react-router-dom react-icon axios
+    => npm i react-icon
+    => npm i axios
+

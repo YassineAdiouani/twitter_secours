@@ -11,7 +11,7 @@ import LoginModal from '../components/Auth/LoginModal/LoginModal';
 
 export default function Countainer() {
   const { Auth } = useStateContext()
-  const path = useLocation().pathname != '/bookmarks' && useLocation().pathname != '/profile';
+  const path = useLocation().pathname != '/explore' && useLocation().pathname != '/profile';
   return (
     <div className='countainer'>
         <Sidebar /> 

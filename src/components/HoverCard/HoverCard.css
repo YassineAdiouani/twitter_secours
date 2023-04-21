@@ -1,0 +1,66 @@
+.hover__card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:15px 10px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+    top: 53px;
+    opacity: 0;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    animation: show 1s linear forwards;
+    -webkit-animation: show .4s linear forwards;
+}
+@keyframes show {
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.hover__card__header{
+    display: flex;
+    justify-content: space-between;
+}
+.big__avatar{
+    width: 64px !important;
+    height: 64px !important;
+}
+.hover__card_user{
+    display: flex;
+    flex-direction: column; 
+    gap: 2px;
+}
+.hover__card .username{
+    font-size: 15px !important;
+}
+.hover__card_user .name{
+    font-size: 18px !important;
+    display: flex;
+    gap: 2px;
+}
+.hover__card_bio{
+    font-weight: 300;
+    font-size: 15px;
+    margin: 5px 0;
+}
+.card__followers{
+    display: flex;
+    gap: 19px;
+}
+.c_followers{
+    display: flex;
+    gap: 3px;
+} 
+.Verify__icon svg{
+    width: 20px;
+}

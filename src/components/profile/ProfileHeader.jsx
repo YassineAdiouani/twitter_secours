@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import './ProfileHeader.css'
 import { BiArrowBack } from "react-icons/bi";
 import { CgMoreAlt ,CgCalendarDates } from "react-icons/cg";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 const ProfileHeader = () => {
   const [follow, setfollow] = useState(false)
   const followHandler=()=>{
       setfollow(!follow)
   }
+  const { User } = useStateContext()
+  console.log(User);
+
   return (
     <div>
         <div id="box-top">
@@ -16,7 +20,7 @@ const ProfileHeader = () => {
           </span>
 
           <div id="box-top-right">
-            <p id="name-header">Smail El Faiz</p>
+            <p id="name-header"> { User.name && 'Smail El Faiz' } </p>
             <span id="tweets-number">22 Tweets</span>
           </div>
         </div>

@@ -6,7 +6,9 @@
     padding: 10px 10px 0;
     cursor: pointer;
 }
-
+.father{
+    position: relative;
+}
 .post__avatar{
     width: 43px;
     height: 43px;

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Gallery from "./icons/Gallery";
 import "./HeadTweet.css";
-import * as icons from './IconsImport';
+import * as icons from './IconsImport'; 
 
 export default function HeadTweet() {
     const [active, setActive] = useState(true);
-    const handleChange = () => setActive(!active);
+    const handleChange = () => setActive(!active); 
     return (
         <header className="header__section">
             <div className="head_name_page">

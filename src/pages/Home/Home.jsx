@@ -3,7 +3,7 @@ import Main from '../../layouts/Main'
 import HeadTweet from "./HeadTweet";
 import Post from '../../components/posts/Post'
 
-export default function Home() {
+export default function Home() { 
     return (
         <>
             <Main>
@@ -21,7 +21,7 @@ export default function Home() {
                     }
                 />
                 <Post
-                    usename={"ossama banzima"}
+                    usename={"ossamaBonif"}
                     tagname={"@ossamabanzima"}
                     verify={true}
                     retweeted={true}
@@ -30,8 +30,7 @@ export default function Home() {
                 <Post
                     usename={"ossama banzima"}
                     tagname={"@ossamabanzima"}
-                    verify={true}
-                    retweeted={true}
+                    verify={true} 
                     title={"only boys can bet me in my terrantory"}
                     tweet={'https://i.pinimg.com/564x/fc/40/df/fc40dfa22da42e25ce506281c4381a39.jpg'}
                 />

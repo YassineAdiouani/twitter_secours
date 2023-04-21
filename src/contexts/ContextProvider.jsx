@@ -4,10 +4,12 @@ import React, { useContext, createContext, useState } from "react";
 const StateContext = createContext()
 
 export const ContextProvider = ({ children }) => {
-    const Auth = false;
+    const [Auth, setAuth] = useState(false)
+    const [User, setUser] = useState()
     const [AuthModal, setAuthModal] = useState(false)
+    const [CardHover, setCardHover] = useState(false)
     return (
-        <StateContext.Provider value={{ Auth, AuthModal, setAuthModal }}>
+        <StateContext.Provider value={{ Auth ,setAuth ,setUser, User, AuthModal, setAuthModal ,CardHover ,setCardHover }}>
             {
                 children
             }

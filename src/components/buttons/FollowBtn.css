@@ -1,0 +1,18 @@
+.button__follow{
+    all: unset;
+    color: rgb(15, 20, 25);
+    background-color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 17px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.button__follow:hover{
+    opacity: .9;
+}
