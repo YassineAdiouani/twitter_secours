@@ -1,15 +1,23 @@
 import React, { useContext, createContext, useState } from "react";
-// import { useLocation } from "react-router-dom";
 
 const StateContext = createContext()
 
 export const ContextProvider = ({ children }) => {
-    const [Auth, setAuth] = useState(false)
-    const [User, setUser] = useState()
+    
+    const CallToast = (content) => {
+        setToast({status:true, content})
+        let timer = setTimeout(() => {
+            setToast({status:false, content:''})
+        },2222)
+    }
+
+    const [Toast, setToast] = useState({ status: false, content: '' })
+    const [steps, setSteps] = useState(true)
     const [AuthModal, setAuthModal] = useState(false)
     const [CardHover, setCardHover] = useState(false)
+
     return (
-        <StateContext.Provider value={{ Auth ,setAuth ,setUser, User, AuthModal, setAuthModal ,CardHover ,setCardHover }}>
+        <StateContext.Provider value={{ CallToast, Toast, steps, setSteps, AuthModal, setAuthModal ,CardHover ,setCardHover }}>
             {
                 children
             }

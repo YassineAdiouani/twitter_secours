@@ -13,7 +13,7 @@ export default function Home() {
                     usename={"ossama banzima"}
                     tagname={"@ossamabanzima"}
                     verify={true}
-                    liked={false}
+                    liked={true}
                     retweeted={false}
                     title={"only boys can bet me in my terrantory"}
                     tweet={
@@ -24,6 +24,7 @@ export default function Home() {
                     usename={"ossamaBonif"}
                     tagname={"@ossamabanzima"}
                     verify={true}
+                    liked={false}
                     retweeted={true}
                     title={"only boys can bet me in my terrantory"}
                 />
@@ -31,6 +32,7 @@ export default function Home() {
                     usename={"ossama banzima"}
                     tagname={"@ossamabanzima"}
                     verify={true} 
+                    liked={true}
                     title={"only boys can bet me in my terrantory"}
                     tweet={'https://i.pinimg.com/564x/fc/40/df/fc40dfa22da42e25ce506281c4381a39.jpg'}
                 />

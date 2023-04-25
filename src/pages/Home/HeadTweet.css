@@ -139,7 +139,7 @@
     pointer-events: none;
     opacity: .7;
 }
-.header__buttons button.active{
+.header__buttons button.active__click__btn{
     pointer-events: all;
     opacity: 1;
 }

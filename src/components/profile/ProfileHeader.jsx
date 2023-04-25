@@ -3,8 +3,10 @@ import './ProfileHeader.css'
 import { BiArrowBack } from "react-icons/bi";
 import { CgMoreAlt ,CgCalendarDates } from "react-icons/cg";
 import { useStateContext } from "../../contexts/ContextProvider";
+import { useSelector } from "react-redux";
 
 const ProfileHeader = () => {
+  const { user } = useSelector(state => state.Auth)
   const [follow, setfollow] = useState(false)
   const followHandler=()=>{
       setfollow(!follow)
@@ -20,7 +22,7 @@ const ProfileHeader = () => {
           </span>
 
           <div id="box-top-right">
-            <p id="name-header"> { User.name && 'Smail El Faiz' } </p>
+            <p id="name-header">Smail El Faiz</p>
             <span id="tweets-number">22 Tweets</span>
           </div>
         </div>
@@ -44,17 +46,17 @@ const ProfileHeader = () => {
       </div>
 
       <div id="name-id-box">
-        <p id="name-user">Smail Elfaiz</p>
-        <p id="id-user">@Sb3</p>
+        <p id="name-user"> { user.name } </p>
+        <p id="id-user"> { user.pseudo } </p>
       </div>
 
       <div id="etat-box">
-        <p id="etat">Full stack developper</p>
+        <p id="etat"> { user.birthDay } </p>
       </div>
       
       <div id="date-box">
         <CgCalendarDates id="date-icon" />
-        <p id="date">Joined January 2021</p>
+        <p id="date"> { user.created_at } </p>
       </div>
 
       <div id="following-follow-box">

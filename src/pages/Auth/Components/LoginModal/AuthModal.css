@@ -24,8 +24,25 @@
     background-color: black;
 }
 
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 11px 11px 19px 11px;
+}
+
+.empty__header__modal {
+    width: 30px;
+    height: 30px;
+}
+
+.modal__logo {
+    justify-content: center;
+    padding-right: 12px;
+}
+
 .modal__close {
-    position: absolute;
+    /* position: absolute; */
     top: 13px;
     left: 13px;
     width: 29px;
@@ -35,7 +52,8 @@
     transition: all .2s ease;
 }
 .modal__close,
-.modal__body {
+.modal__body,
+.modal__logo {
     display: flex;
     justify-content: center;
 }
@@ -55,13 +73,19 @@
 
 @media (max-width: 1500px) {
     .login__content{
-        width: 600px;
-        height: 680px;
+        width: 700px;
+        height: 750px;
     }
 }
 @media (max-width: 900px) {
     .login__content{
-        width: 500px;
-        height: 600px;
+        width: 628px;
+        height: 622px;
+    }
+}
+@media (max-width: 700px) {
+    .login__content{
+        width: 505px;
+        height: 540px;
     }
 }

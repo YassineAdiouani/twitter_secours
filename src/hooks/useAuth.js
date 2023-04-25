@@ -1,17 +1,23 @@
-import axios from 'axios'
+import axios from '../api/axios'
 import  { useEffect, useState } from 'react'
 
 const useAuth = (url) => {
-  axios.post('http://127.0.0.1:8000/api/login', url)
-  .then(res => {
-      if(res.status === 200) {
-          // setUser(res.data.data.user)
-          console.log(res);
-          // setAuth(true)
-          // navigate('/')
-      }
-  }).catch(Err => {
-      console.log(Err);
-  })
+
+    const [loading, setLoading] = useState(true)
+    const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
+    console.log(url);
+    useEffect(()=>{ 
+        axios.get('/login',url)
+        .then(function (response) {
+            setData(response.data)
+            setLoading(false)
+        })
+        .catch(function (error) {
+            setLoading(false)
+            setError(false)
+        }); 
+    },[url])
+    return {data , loading , error}
 }
 export default useAuth
